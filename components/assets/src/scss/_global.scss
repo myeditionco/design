@@ -38,8 +38,14 @@ header.me-design-hdr{
 					height: 40px;
 					line-height: 40px;
 					color: #fff;
-					letter-spacing: 0.8px;
+					letter-spacing: 1.2px;
 					font-weight: 200;
+					font-size: 10px;
+					opacity: .8;
+					&:hover{
+						text-decoration: none;
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -56,9 +62,56 @@ header.me-design-hdr{
 		}
 	}
 }
+footer.me-design-ftr{
+	position: fixed;
+	width: 100%;
+	bottom:0;
+	padding: 10px;
+	background-color: $bgblack;
+	a{
+		padding: 0px 10px;
+		height: 40px;
+		line-height: 40px;
+		color: #fff;
+		letter-spacing: 1.2px;
+		font-weight: 200;
+		font-size: 10px;
+		opacity: .8;
+		&:hover{
+			text-decoration: none;
+			opacity: 1;
+		}
+	}
+}
 .home{
 	h1{
 		font-size: 68px;
 		margin-bottom: 30px;
+	}
+}
+.elements-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li{
+		display: block;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid $cutwhite;
+		a{
+			opacity: 0.5;
+			display: block;
+			width: 100%;
+			padding: 25px;
+			color: #fff;
+			@include transition(.25s);
+			&:hover{
+				opacity: 1;
+				text-decoration: none;
+			}
+		}
+		&:last-child{
+			border-bottom: none;
+		}
 	}
 }

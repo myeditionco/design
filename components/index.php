@@ -6,21 +6,21 @@ if(isset($_GET['v'])){
 	if($view == "elements"){
 		if(isset($_GET['e'])){
 			$element = $_GET['e'];
-			$url = "views/".$view.'/'.$element.'/index.php';
+			$url = "views/".$view.'/'.$element.'/index.phtml';
 		}
 		else{
-			$url = "views/".$view.'/index.php';
+			$url = "views/".$view.'/index.phtml';
 		}
 	}
 	elseif($view == "about"){
-		$url = "views/about/index.php";
+		$url = "views/about/index.phtml";
 	}
 	else{
-		$url = "views/errors/e404.php";
+		$url = "views/errors/e404.phtml";
 	}
 }
 else{
-	$url = "views/home/index.php";
+	$url = "views/home/index.phtml";
 }
 
 ob_start();
