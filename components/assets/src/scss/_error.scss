@@ -1,0 +1,12 @@
+.error{
+	&.error404{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		height: 80vh;
+		-ms-align-items: center;
+		align-items: center;
+	}
+}

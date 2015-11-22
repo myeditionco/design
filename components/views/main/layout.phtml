@@ -1,0 +1,31 @@
+
+<?php 
+	$global_footer = 'footer.phtml'; 
+	$global_header = 'header.phtml'; 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./assets/dist/css/app.css">
+	<script type="text/javascript" src="./assets/dist/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./assets/dist/js/app.js"></script>
+	
+	<title>My Edition Design Components</title>
+</head>
+<body>
+	<?php  
+		if(defined('use_hdr') && use_hdr == true) 
+		{ 
+			include_once $global_header; 
+		}
+		echo $content;
+		if(defined('use_ftr') && use_ftr == true) 
+		{ 
+			include_once $global_footer; 
+		} 
+	?>
+	<script type="text/javascript" src="./assets/dist/js/prism.js"></script>
+</body>
+</html>

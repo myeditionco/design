@@ -1,0 +1,9 @@
+
+.btn-line{
+	border-width: 1px;
+	border-style: solid;
+  border-color: $btnlinecolor;
+}
+.btn-zrad{
+	@include border-radius(0px);
+}

@@ -1,0 +1,14 @@
+<?php 
+	define('use_hdr', true);
+	define('use_ftr', true);
+?>
+
+<div class="container dark home">
+	<div class="row">
+		<div class="col-lg-offset-2 col-lg-4">
+			<h1>My Edition Design Elements</h1>
+			<p>A set of UI web components, values, attributes, and artworks carefully curated and developed by the team at My Edition Company - Digital Agency. The goal is to provide a consistent catalogue of design resources to be used for future projects.</p>
+			<a href="#" class="btn btn-line btn-zrad">Browse components</a>
+		</div>
+	</div>
+</div>

@@ -1,14 +1,17 @@
 {
   "name": "components",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"My Edition Design Elements\"",
   "private": true,
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "watch-sass": "sass --watch src/scss/app.scss:dist/css/app.css",
-    "watch-js": "watchify src/js/main.js -o dist/js/app.js",
-    "watch": "npm run watch-sass & npm run watch-js"
+  	"watch-sass": "sass --watch assets/src/scss:assets/dist/css --style compressed",
+  	"watch-js": "watchify assets/src/js/app.js -o assets/dist/js/app.js -dv",
+  	"watch": "npm run watch-sass & npm run watch-js",
+  	"build-js": "browserify assets/src/js/app.js | uglifyjs -mc > assets/dist/js/app.js",
+		"build-sass": "sass assets/src/scss/app.scss:assets/dist/css/app.css --style compressed",
+		"build": "npm run build-sass & npm run build-js"
   },
   "author": "My Edition Company",
-  "license": "ISC"
+  "license": "MIT"
 }

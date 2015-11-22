@@ -1,0 +1,64 @@
+@import "mixins/prefixer";
+body{
+	padding: 0;
+	margin: 0;
+	background-color: $bgblack;
+}
+pre{
+	border: none;
+}
+h1{
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+header.me-design-hdr{
+	position: relative;
+	top:0;
+	width: 100%;
+	padding: 10px 0;
+	.container{
+		position: relative;
+		#me-design-main_logo{
+			background-image: $me-design-logo;
+			display: inline-block;
+	    width: 40px;
+	    height: 40px;
+	    color: transparent;
+		}
+		ul{
+			display: inline-block;
+			position: absolute;
+			right:15px;
+			li{
+				display: inline-block;
+				float: none;
+				list-style: none;
+				a{
+					padding: 0px 10px;
+					height: 40px;
+					line-height: 40px;
+					color: #fff;
+					letter-spacing: 0.8px;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+}
+.container{
+	&.dark{
+		color: white;
+		p{
+			color: $cutwhite;
+    	font-size: 11px;
+    	line-height: 20px;
+    	letter-spacing: 0.4px;
+		}
+	}
+}
+.home{
+	h1{
+		font-size: 68px;
+		margin-bottom: 30px;
+	}
+}
