@@ -7,8 +7,8 @@
 	border-width: 1px;
 	border-style: solid;
 	&.btn-line-white{
-	  border-color: white;
-	  color: white;
+	  border-color: $cutwhite;
+	  color: $cutwhite;
 	}
 	&:hover{
 		opacity: 1;

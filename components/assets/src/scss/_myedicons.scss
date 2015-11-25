@@ -24,6 +24,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+[class*="icon-myed-"]{
+  &.icon-bg-indigo { background-color: $indigo; }
+  &.icon-bg-purple { background-color: $purple; }
+  &.icon-bg-blue   { background-color: $blue;   }
+  &.icon-bg-teal   { background-color: $teal;   }
+  &.icon-bg-green  { background-color: $green;  }
+  &.icon-bg-lime   { background-color: $lime;   }
+  &.icon-bg-yellow { background-color: $yellow; }
+  &.icon-bg-orange { background-color: $orange; }
+}
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {

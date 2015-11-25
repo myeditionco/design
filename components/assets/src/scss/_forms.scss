@@ -1,0 +1,42 @@
+.rounded-switch-box{
+	.rounded-switch{
+		@include box-shadow(inset 0px 0px 3px rgba(22, 24, 25, 0.05));
+		@include border-radius(26px);
+		@include transition(0.2s ease-in-out);
+		overflow: visible;
+		display: inline-block;
+		width: 52px;
+		height: 26px;
+		background-color: $black;
+		outline: none;
+		&:before{
+		 	@include transition(.2s ease-in-out);
+			@include border-radius(26px);
+			@include box-shadow(0px 0px 3px rgba(2, 2, 2, 0.15));
+			position: relative;
+			content:"";
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			background-color: $teal;
+			border: 11px solid $bgblack; 
+		}
+	}	
+	&.white{
+		.rounded-switch{
+			background-color: $light-gray;
+			&:before{
+				border-color: white;
+			}
+		}
+	}
+
+	input[type="checkbox"]{
+		display: none;
+		&:checked + .rounded-switch{
+			&:before{
+				margin-left:26px;
+			}
+		}
+	} 
+}

@@ -3,6 +3,25 @@ body{
 	padding: 0;
 	margin: 0;
 	background-color: $bgblack;
+	@include transition(background-color 0.2);
+	&.light{
+		background-color: white;
+		.me-design-ftr{
+			background-color: $light-gray;
+			a{
+				color: $black !important;
+				font-weight: normal;
+			}
+		}
+		.me-design-hdr{
+			ul{
+				a{
+					color: $black !important;
+					font-weight: normal;
+				}
+			}
+		}
+	}
 }
 pre{
 	border: none;
@@ -25,6 +44,7 @@ header.me-design-hdr{
 	    height: 40px;
 	    color: transparent;
 		}
+
 		ul{
 			display: inline-block;
 			position: absolute;
@@ -37,7 +57,7 @@ header.me-design-hdr{
 					padding: 0px 10px;
 					height: 40px;
 					line-height: 40px;
-					color: #fff;
+					color: white;
 					letter-spacing: 1.2px;
 					font-weight: 200;
 					font-size: 10px;
@@ -46,6 +66,10 @@ header.me-design-hdr{
 						text-decoration: none;
 						opacity: 1;
 					}
+				}
+				form#toggleUIColor{
+					position: relative;
+					top:9px;
 				}
 			}
 		}
@@ -61,13 +85,20 @@ header.me-design-hdr{
     	letter-spacing: 0.4px;
 		}
 	}
+	&.white{
+		color: $black;
+		p{
+			color: $black;
+		}
+	}
 }
 footer.me-design-ftr{
 	position: fixed;
 	width: 100%;
 	bottom:0;
-	padding: 10px;
-	background-color: $bgblack;
+	padding: 6px 0;
+	background-color: $black;
+	@include box-shadow(0px -2px 3px rgba(22, 24, 25, 0.15));
 	a{
 		padding: 0px 10px;
 		height: 40px;
@@ -101,20 +132,31 @@ footer.me-design-ftr{
 		a{
 			display: block;
 			width: 100%;
-			padding: 20px 25px;
-			color: #fff;
+			padding: 20px 25px 20px 10px;
+			color: $cutwhite;
 			border-bottom: 1px solid $cutwhite;
+			font-weight: 200;
+			font-size: 12px;
+			letter-spacing: 0.8px;
 			@include transition(.25s);
 			&:hover{
-				background-color: rgba(22, 25, 27,0.4);
+				background-color: rgba(22, 25, 27,0.05);
 				text-decoration: none;
-				padding-left: 30px;
+				padding-left: 20px;
 			}
-			span{
+			span[class*="icon-myed-"]{
+				@include border-radius(2px);
+				position: relative;
+				top:3px;
 				color: #fff;
 				font-size: 18px;
-				padding: 4px;
-				@include border-radius(2px);
+				padding: 2px;
+				display: inline-block;
+				text-align: center;
+		    width: 26px;
+		    height: 26px;
+		    line-height: 27px;
+		    margin-right: 4px;
 			}
 		}
 		&:last-child{
