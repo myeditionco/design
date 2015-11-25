@@ -26,6 +26,27 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+	&.light{
+		background-color: $light-gray;
+		color: $cutwhite;
+		text-shadow: none;
+		.token.punctuation {
+			color: $cutwhite;
+		}
+		.token.atrule,
+		.token.attr-value,
+		.token.function {
+			color: $indigo;
+		}
+		.token.selector,
+		.token.attr-name,
+		.token.string,
+		.token.char,
+		.token.builtin,
+		.token.inserted {
+			color: $green;
+		}
+	}
 }
 
 /* Code blocks */
