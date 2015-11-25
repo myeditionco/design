@@ -92,26 +92,35 @@ footer.me-design-ftr{
 .elements-list{
 	list-style: none;
 	padding: 0;
+	padding-bottom: 50px;
 	margin: 0;
 	li{
 		display: block;
 		margin: 0;
 		padding: 0;
-		border-bottom: 1px solid $cutwhite;
 		a{
-			opacity: 0.5;
 			display: block;
 			width: 100%;
-			padding: 25px;
+			padding: 20px 25px;
 			color: #fff;
+			border-bottom: 1px solid $cutwhite;
 			@include transition(.25s);
 			&:hover{
-				opacity: 1;
+				background-color: rgba(22, 25, 27,0.4);
 				text-decoration: none;
+				padding-left: 30px;
+			}
+			span{
+				color: #fff;
+				font-size: 18px;
+				padding: 4px;
+				@include border-radius(2px);
 			}
 		}
 		&:last-child{
-			border-bottom: none;
+			a{
+				border-bottom: none;
+			}
 		}
 	}
 }

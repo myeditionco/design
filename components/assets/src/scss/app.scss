@@ -1,10 +1,11 @@
 /* import bootstrap */
 @import '../../vendor/node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-/* import prism syntax highlighter */
-@import 'prism';
-
 /* import all global variables */
 @import 'config/variables';
+
+/* import prism syntax highlighter */
+@import 'prism';
+@import 'myedicons';
 
 @import 'global';
 @import 'error';
